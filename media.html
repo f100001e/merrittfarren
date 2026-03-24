@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media & Press — Merritt Farren for California Insurance Commissioner 2026</title>
+<meta name="description" content="Press coverage, news articles, and media appearances for Merritt Farren's campaign for California Insurance Commissioner 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800;900&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* ── MEDIA PAGE SPECIFIC STYLES ── */
+
+  .media-hero {
+    background: var(--navy);
+    padding-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .media-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(200,32,47,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .media-hero-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 80px 40px 72px;
+    position: relative; z-index: 2;
+  }
+  .media-hero-inner .section-label { color: rgba(255,255,255,0.5); }
+  .media-hero-inner .section-label::before { background: rgba(255,255,255,0.35); }
+  .media-hero-inner .section-title { color: var(--white); margin-bottom: 16px; }
+  .media-hero-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem; font-weight: 400;
+    color: rgba(255,255,255,0.65); line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* social follow strip */
+  .media-social-strip {
+    background: rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .media-social-strip-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 18px 40px;
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .media-social-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-right: 8px;
+  }
+  .media-social-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 7px 16px; border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+    color: var(--white);
+  }
+  .media-social-btn:hover { opacity: 0.85; transform: translateY(-1px); color: var(--white); }
+  .media-social-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+  .media-social-btn-yt  { background: #FF0000; }
+  .media-social-btn-fb  { background: #1877F2; }
+  .media-social-btn-ig  { background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888); }
+
+  /* press grid */
+  .press-section {
+    background: var(--offwhite);
+    padding: 80px 40px 100px;
+  }
+  .press-inner { max-width: 1100px; margin: 0 auto; }
+
+  .press-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 52px;
+  }
+
+  .press-card {
+    background: var(--white);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    padding: 28px 28px 24px;
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .press-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: var(--red);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.25s;
+  }
+  .press-card:hover { box-shadow: 0 8px 36px rgba(0,0,0,0.1); transform: translateY(-3px); }
+  .press-card:hover::before { transform: scaleX(1); }
+
+  .press-outlet {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--red); margin-bottom: 12px;
+  }
+  .press-headline {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700; font-size: 1rem;
+    color: var(--navy); line-height: 1.35;
+    margin-bottom: 12px; flex: 1;
+  }
+  .press-read {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--navy); transition: color 0.2s, gap 0.2s;
+  }
+  .press-read svg { width: 13px; height: 13px; transition: transform 0.2s; }
+  .press-card:hover .press-read { color: var(--red); gap: 10px; }
+  .press-card:hover .press-read svg { transform: translateX(3px); }
+
+  /* featured card — spans 2 cols */
+  .press-card--featured {
+    grid-column: span 2;
+    background: var(--navy);
+    border-color: transparent;
+    padding: 36px 36px 30px;
+  }
+  .press-card--featured .press-outlet { color: rgba(255,255,255,0.5); }
+  .press-card--featured .press-headline {
+    font-size: 1.25rem; color: var(--white);
+  }
+  .press-card--featured .press-read { color: rgba(255,255,255,0.6); }
+  .press-card--featured:hover .press-read { color: var(--white); }
+  .press-card--featured::before { background: var(--red); }
+
+  /* back link */
+  .media-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); text-decoration: none;
+    margin-bottom: 32px; transition: color 0.2s;
+  }
+  .media-back:hover { color: var(--white); }
+  .media-back svg { width: 14px; height: 14px; }
+
+  @media (max-width: 960px) {
+    .press-grid { grid-template-columns: repeat(2, 1fr); }
+    .press-card--featured { grid-column: span 2; }
+    .media-hero-inner { padding: 60px 24px 52px; }
+    .press-section { padding: 60px 24px 80px; }
+    .media-social-strip-inner { padding: 16px 24px; }
+  }
+  @media (max-width: 580px) {
+    .press-grid { grid-template-columns: 1fr; }
+    .press-card--featured { grid-column: span 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><img src="images/logo.jpg" alt="Merritt Farren for Insurance Commissioner 2026"></a>
+  <ul class="nav-links">
+    <li><a href="/#story">About</a></li>
+    <li><a href="/#issues">Issues</a></li>
+    <li><a href="/media">Media</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="https://www.efundraisingconnections.com/c/FarrenforInsuranceCommissioner2026" target="_blank" class="nav-donate">Donate</a></li>
+  </ul>
+  <div class="nav-social">
+    <a href="https://www.facebook.com/merritt.farren" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.instagram.com/merrittfarren" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@MerrittFarrenCampaign" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://x.com/merrittfarren" target="_blank" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu-links">
+    <li><a href="/#story">About</a></li>
+    <li><a href="/#issues">Issues</a></li>
+    <li><a href="/media">Media</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="https://www.efundraisingconnections.com/c/FarrenforInsuranceCommissioner2026" target="_blank" class="mobile-donate">Donate</a></li>
+  </ul>
+  <div class="mobile-menu-social">
+    <a href="https://www.facebook.com/merritt.farren" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.instagram.com/merrittfarren" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@MerrittFarrenCampaign" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://x.com/merrittfarren" target="_blank" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  </div>
+</div>
+
+<!-- MEDIA HERO -->
+<div class="media-hero">
+  <div class="media-hero-inner">
+    <a href="/" class="media-back">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="14" y1="8" x2="2" y2="8"/><polyline points="7,3 2,8 7,13"/></svg>
+      Back to Home
+    </a>
+    <div class="section-label">Press & Media</div>
+    <h1 class="section-title">Merritt in the News</h1>
+    <p class="media-hero-desc">Coverage of Merritt Farren's campaign for California Insurance Commissioner — from the fight against State Farm to the race for 2026.</p>
+  </div>
+
+  <!-- SOCIAL STRIP -->
+  <div class="media-social-strip">
+    <div class="media-social-strip-inner">
+      <span class="media-social-label">Follow</span>
+      </a>
+      <a href="https://www.facebook.com/merritt.farren" target="_blank" class="media-social-btn media-social-btn-fb">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a href="https://www.instagram.com/merrittfarren" target="_blank" class="media-social-btn media-social-btn-ig">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.youtube.com/@MerrittFarrenCampaign" target="_blank" class="media-social-btn media-social-btn-yt">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        YouTube
+      <a href="https://x.com/merrittfarren" target="_blank" class="media-social-btn" style="background:#000;">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PODCAST VIDEO -->
+<section class="video-section">
+  <div class="video-section-inner">
+    <div class="video-section-header">
+      <div class="section-label">Watch</div>
+      <h2 class="section-title">Three Homeless Guys Podcast — Interview with Merritt Farren</h2>
+    </div>
+    <div class="video-stage">
+      <div class="video-frame-accent video-frame-accent--tl"></div>
+      <div class="video-frame-accent video-frame-accent--br"></div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/tvpQlVwSCeM"
+          title="Three Homeless Guys Podcast — Interview with Merritt Farren"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS GRID -->
+<div class="press-section">
+  <div class="press-inner">
+    <div class="section-label">Coverage</div>
+    <h2 class="section-title">Press Articles</h2>
+    
+    <div class="press-grid">
+
+      <!-- Featured: Circling the News — Mar 4, 2026 -->
+      <a class="press-card press-card--featured" href="https://www.circlingthenews.com/running-for-insurance-commissioner-merritt-farren-knows-the-game/" target="_blank">
+        <div class="press-outlet">Circling the News &mdash; March 4, 2026</div>
+        <div class="press-headline">Running for Insurance Commissioner: Merritt Farren Knows the Game</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- Carrier Management — Feb 12, 2026 (Reinsurance/FAIR Plan) -->
+      <a class="press-card" href="https://www.carriermanagement.com/features/2026/02/12/284526.htm" target="_blank">
+        <div class="press-outlet">Carrier Management &mdash; Feb. 12, 2026</div>
+        <div class="press-headline">Reinsurance Program Could Wipe Out Need for Calif. FAIR Plan</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- Carrier Management — Dec 16, 2025 (Good Neighbor) -->
+      <a class="press-card" href="https://www.carriermanagement.com/features/2025/12/16/282419.htm" target="_blank">
+        <div class="press-outlet">Carrier Management &mdash; Dec. 16, 2025</div>
+        <div class="press-headline">The Good Neighbor — a Profile of Reliance and Community Service in Action</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- LA Times — Aug 29, 2025 -->
+      <a class="press-card" href="https://www.latimes.com/business/story/2025-08-29/judge-rules-homeowner-can-probe-state-farm-claims-practices-in-rate-hearing" target="_blank">
+        <div class="press-outlet">Los Angeles Times &mdash; Aug. 29, 2025</div>
+        <div class="press-headline">Judge Rules Homeowner Can Probe State Farm Claims Practices in Rate Hearing</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- LA Magazine — July 15, 2025 -->
+      <a class="press-card" href="https://lamag.com/news/wildfire-survivor-intervenes-in-proceedings-against-state-farm/" target="_blank">
+        <div class="press-outlet">Los Angeles Magazine &mdash; July 15, 2025</div>
+        <div class="press-headline">Wildfire Survivor Intervenes in Proceedings Against State Farm</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- Westside Current — May 30, 2025 -->
+      <a class="press-card" href="https://www.westsidecurrent.com/news/disney-s-former-top-lawyer-leads-fight-for-fair-insurance-after-palisades-fire/article_1b14e0f1-53c9-4d88-8dc2-42fa84a0969a.html" target="_blank">
+        <div class="press-outlet">Westside Current &mdash; May 30, 2025</div>
+        <div class="press-headline">Disney's Former Top Lawyer Leads Fight for Fair Insurance After Palisades Fire</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- LA Times — Feb 21, 2026 -->
+      <a class="press-card" href="https://www.latimes.com/business/story/2026-02-21/typically-sleepy-race-for-insurance-commissioner-heats-up" target="_blank">
+        <div class="press-outlet">Los Angeles Times &mdash; Feb. 21, 2026</div>
+        <div class="press-headline">Typically Sleepy Race for Insurance Commissioner Heats Up</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- Carrier Management — Mar 9, 2026 -->
+      <a class="press-card" href="https://www.carriermanagement.com/news/2026/03/09/285462.htm" target="_blank">
+        <div class="press-outlet">Carrier Management &mdash; Mar. 9, 2026</div>
+        <div class="press-headline">California Insurance Commissioner Race: What the Industry Needs to Know</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- Carrier Management — Nov 20, 2025 -->
+      <a class="press-card" href="https://www.carriermanagement.com/features/2025/11/20/281652.htm" target="_blank">
+        <div class="press-outlet">Carrier Management &mdash; Nov. 20, 2025</div>
+        <div class="press-headline">The Case for CAL Reinsure: A State-Backed Fix for the Wildfire Insurance Crisis</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- Commonwealth Club -->
+      <a class="press-card" href="https://www.commonwealthclub.org/events/2026-02-13/california-insurance-commissioner-candidate-forum" target="_blank">
+        <div class="press-outlet">Commonwealth Club World Affairs</div>
+        <div class="press-headline">California Insurance Commissioner Candidate Forum</div>
+        <div class="press-read">View the event <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+      <!-- AOL News -->
+      <a class="press-card" href="https://www.aol.com/articles/heres-running-heated-race-insurance-110000515.html" target="_blank">
+        <div class="press-outlet">AOL News</div>
+        <div class="press-headline">Here's Who's Running in the Heated Race for Insurance Commissioner</div>
+        <div class="press-read">Read the story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></div>
+      </a>
+ 
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <span class="fppc-disclaimer">Paid for by Farren for Insurance Commissioner 2026 &nbsp;·&nbsp; FPPC #1487915</span>
+  </div>
+  <div class="footer-links">
+    <a href="/#story">About</a>
+    <a href="/#issues">Issues</a>
+    <a href="/media">Media</a>
+    <a href="/#contact">Contact</a>
+    <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');document.body.style.overflow='hidden';return false;">Privacy Policy</a>
+    <a href="https://www.efundraisingconnections.com/c/FarrenforInsuranceCommissioner2026" target="_blank">Donate</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/merritt.farren" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.instagram.com/merrittfarren" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@MerrittFarrenCampaign" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://x.com/merrittfarren" target="_blank" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  </div>
+</footer>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="endorse-modal-overlay" id="privacyModal">
+  <div class="endorse-modal">
+    <button class="endorse-modal-close" onclick="document.getElementById('privacyModal').classList.remove('open');document.body.style.overflow='';" aria-label="Close">&times;</button>
+    <h3>Privacy Policy</h3>
+    <p>Farren for Insurance Commissioner 2026 ("the Campaign") is committed to protecting your privacy. This policy explains how we collect, use, and protect your information.</p>
+    <h4>Information We Collect</h4>
+    <p>We collect information you voluntarily provide — such as your name, email address, and phone number — when you sign up for updates, contact the campaign, or submit an endorsement. We also collect anonymous usage data through analytics tools to understand how visitors use this site.</p>
+    <h4>How We Use Your Information</h4>
+    <p>Your information is used to send campaign updates, respond to inquiries, and communicate about events and volunteer opportunities. We do not sell or share your personal information with third parties for their own marketing purposes.</p>
+    <h4>Cookies</h4>
+    <p>This site uses cookies to analyze traffic and improve your experience. You can disable cookies in your browser settings at any time. Continued use of this site constitutes acceptance of our use of cookies.</p>
+    <h4>Data Security</h4>
+    <p>We take reasonable steps to protect your information from unauthorized access or disclosure. However, no internet transmission is completely secure.</p>
+    <h4>Contact</h4>
+    <p>Questions about this policy? Email us at <a href="mailto:Merritt@MerrittFarrenCA.com">Merritt@MerrittFarrenCA.com</a>.</p>
+    <p style="font-size:0.78rem;color:#999;margin-top:20px;">Paid for by Farren for Insurance Commissioner 2026 &nbsp;·&nbsp; FPPC #1487915</p>
+  </div>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+</body>
+</html>
