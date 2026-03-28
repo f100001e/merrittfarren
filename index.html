@@ -98,7 +98,7 @@
     <div class="hero-action-col">
       <h3>Email Updates</h3>
       <p>Get campaign updates and key announcements. Sign up for the email list.</p>
-      <form action='/thanks' class='volunteer-form' id='emailListForm' method='POST' name='email-list'>
+      <form action='/thanks' class='volunteer-form' id='emailListForm' method='POST' name='email-list' data-netlify="true">
         <input type="hidden" name="form-name" value="email-list" />
         <input type="email" name="email" id="emailListEmail" placeholder="Your email" autocomplete="email" required>
         <button type="submit">Sign Up</button>
@@ -207,50 +207,74 @@
 <section id="issues">
   <div class="section-inner">
     <div class="section-label" style="color:rgba(255,255,255,0.5)">Reform Agenda</div>
-    <h2 class="section-title">Five Pillars to Fix<br>California's Insurance Crisis</h2>
+    <h2 class="section-title">The Plan to Fix<br>California's Insurance Crisis</h2>
     <p class="issues-intro">California is the world's greatest center for innovation — yet we've failed to innovate where it matters most. Merritt's plan draws on real executive experience to deliver structural reform in home, auto, business, and health insurance — not political theater.</p>
-    <div class="issues-grid issues-grid-5">
-      <div class="issue-card">
+
+    <div class="issues-grid issues-grid-3">
+
+      <!-- PILLAR 1 -->
+      <div class="issue-card issue-card--expandable" id="pillar1">
         <div class="issue-number">01</div>
-        <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <h3>Big Structural Change to Drive Choice &amp; Lower Costs</h3>
-        <p>Incremental change won't solve our crisis. California needs bold, structural reform on the scale of what Amazon and Disney have delivered — transforming home, auto, business, and health insurance.</p>
-        <span class="issue-tag">Structural Reform</span>
-        <a class='issue-link' href='/issues/structural-change'>Read the full plan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
+        <div class="issue-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>A Technology-Centric Reinvention of Insurance Regulations</h3>
+        <p>No tinkering with a broken system. Merritt will lead big, from-the-ground-up reform — modeled on the teams that launched Kindle and eBooks — ushering in an insurance tech revolution that matches the innovation consumers enjoy in banking today.</p>
+        <div class="issue-expanded" aria-hidden="true">
+          <p>California's insurance regulatory framework was built for a different era. Decades of incremental rule-making have produced a system that is slow, opaque, and hostile to competition. The answer is not another round of small adjustments to a fundamentally broken structure.</p>
+          <p>Merritt has been part of teams that launched entirely new categories at scale — Kindle, Prime Video, Amazon Studios, Audible. He knows what it takes to reinvent an industry from the ground up. That experience is what he will bring to the Department of Insurance.</p>
+          <p>The tech-centric reforms Merritt will implement recognize a fundamental truth: our rules need to work for both consumers and insurers. Insurance in California isn't working for either right now. With Merritt's leadership, it will work for both — and that insurance tech revolution will be built right here in California, bringing jobs and new business prosperity.</p>
+        </div>
+        <span class="issue-tag">Tech Reform</span>
+        <button class="issue-expand-btn" aria-expanded="false" aria-controls="pillar1">
+          Read the full plan
+          <svg class="expand-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><line x1="8" y1="2" x2="8" y2="14" class="expand-icon-v"/></svg>
+        </button>
       </div>
-      <div class="issue-card">
+
+      <!-- PILLAR 2 -->
+      <div class="issue-card issue-card--expandable" id="pillar2">
         <div class="issue-number">02</div>
-        <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Bring Insurers Back with CAL Reinsure</h3>
+        <div class="issue-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Implement CAL Reinsure to Eliminate the FAIR Plan</h3>
         <p>A state-backed reinsurance authority removes concentrated wildfire risk from individual insurers — letting carriers re-enter California, restoring competition, and eliminating the FAIR Plan.</p>
+        <div class="issue-expanded" aria-hidden="true">
+          <p>The core problem driving California's insurance crisis is that concentrated community fire risk has made it economically impossible for insurers to write home and property policies in large parts of the state. When an entire neighborhood burns, every policyholder files at once. No private insurer can absorb that — so they leave.</p>
+          <p>CAL Reinsure — developed with insurance industry input — moves that community-scale fire risk onto a reinsurance authority organized by the State. Insurers can then write policies statewide without fearing catastrophic community fire losses. Modeled on Florida's hurricane reinsurance program and the UK's Flood Re program, it has been proven to work.</p>
+          <p>CAL Reinsure also includes a non-negotiable requirement: <strong>full payment of the insured amount within 30 days of a total structural loss.</strong> Families cannot rebuild their lives while insurance companies delay. Neither can entire communities. The 30-day guarantee changes that — for individual homeowners and for the neighborhoods they need to rebuild together.</p>
+        </div>
         <span class="issue-tag">CAL Reinsure</span>
-        <a class='issue-link' href='/issues/cal-reinsure'>Read the full plan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
+        <button class="issue-expand-btn" aria-expanded="false" aria-controls="pillar2">
+          Read the full plan
+          <svg class="expand-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><line x1="8" y1="2" x2="8" y2="14" class="expand-icon-v"/></svg>
+        </button>
       </div>
-      <div class="issue-card">
+
+      <!-- PILLAR 3 -->
+      <div class="issue-card issue-card--expandable" id="pillar3">
         <div class="issue-number">03</div>
-        <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3>Simplification &amp; InsurTech Innovation</h3>
-        <p>Simplify rules to eliminate delay-and-deny tactics, and spark a California-grown insurance tech revolution — bringing consumers affordable new options modeled on the fintech breakthroughs like Apple Pay and Zelle.</p>
-        <span class="issue-tag">Invent &amp; Simplify</span>
-        <a class='issue-link' href='/issues/insurtech'>Read the full plan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
-      </div>
-      <div class="issue-card">
-        <div class="issue-number">04</div>
-        <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Community Safety &amp; Attack Root Causes of Cost</h3>
-        <p>Champion home hardening, set minimum community fire safety standards, and aggressively expose the underlying cost drivers — from infrastructure failures to fraud — that inflate premiums across all insurance lines.</p>
+        <div class="issue-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Aggressive Leadership on Community Safety &amp; Root Cost Drivers</h3>
+        <p>Merritt will establish minimum community fire protection standards and go after the underlying costs driving prices up across home, auto, business, and health insurance — line by line.</p>
+        <div class="issue-expanded" aria-hidden="true">
+          <p>Structural reforms and CAL Reinsure address the market collapse — but insurance will only become truly affordable when we attack the costs that drive prices up in the first place. Merritt will introduce a new Department of Insurance agenda focused on exactly that.</p>
+          <p>On community safety: Merritt will establish minimum fire protection standards that cities and counties need to meet to help ensure Californians are safe. Communities that invest in hardening and preparation will be recognized and rewarded in the insurance market. Those that don't will be held accountable.</p>
+          <p>On root costs: Merritt will work insurance line by insurance line — home, auto, business, and health — to expose and attack the underlying cost drivers inflating premiums. From infrastructure failures to fraud to lack of price transparency, the Department of Insurance under Merritt's leadership will shine a light on what is actually driving costs and pursue real solutions with unprecedented vigor.</p>
+        </div>
         <span class="issue-tag">Community Safety</span>
-        <a class='issue-link' href='/issues/community-safety'>Read the full plan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
+        <button class="issue-expand-btn" aria-expanded="false" aria-controls="pillar3">
+          Read the full plan
+          <svg class="expand-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><line x1="8" y1="2" x2="8" y2="14" class="expand-icon-v"/></svg>
+        </button>
       </div>
-      <div class="issue-card">
-        <div class="issue-number">05</div>
-        <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8202F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Customer-First Accountability</h3>
-        <p>Bring the customer-centric standards of Disney and Amazon to California insurance — paving the way for good operators to thrive while holding delay-and-deny carriers accountable with unprecedented vigor.</p>
-        <span class="issue-tag">Customers First</span>
-        <a class='issue-link' href='/issues/customer-first'>Read the full plan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
-      </div>
+
     </div>
+
+    <!-- CAL Reinsure spotlight -->
     <div class="cal-spotlight">
       <div>
         <div class="sub">Flagship Initiative</div>
@@ -263,8 +287,10 @@
         <div class="cal-outcome"><div class="cal-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>Improves long-term rate predictability</div>
         <div class="cal-outcome"><div class="cal-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>Expands consumer choice and affordability</div>
         <div class="cal-outcome"><div class="cal-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>Encourages responsible carrier re-entry</div>
+        <div class="cal-outcome"><div class="cal-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>Full payout within 30 days of total structural loss</div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -317,7 +343,7 @@
           </a>
         </div>
       </div>
-      <form action='/thanks' class='contact-form-wrap' id='contactForm' method='POST' name='contact'>
+      <form action='/thanks' class='contact-form-wrap' id='contactForm' method='POST' name='contact' data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <h3>General Inquiries</h3>
         <p>Share your details and message below. The campaign team will follow up.</p>
@@ -388,7 +414,7 @@
     <button class="endorse-modal-close" onclick="document.getElementById('endorseModal').classList.remove('open');document.body.style.overflow='';" aria-label="Close">&times;</button>
     <h3>Endorsement Form</h3>
     <p>Interested in endorsing Merritt Farren for Insurance Commissioner? Fill out the form below and the campaign team will follow up.</p>
-    <form action='/thanks' id='endorseForm' method='POST' name='endorsement'>
+    <form action='/thanks' id='endorseForm' method='POST' name='endorsement' data-netlify="true">
       <input type="hidden" name="form-name" value="endorsement" />
       <div class="cf-row">
         <div class="cf-group"><label>Full Name</label><input type="text" name="full-name" placeholder="Your full name" autocomplete="name" required /></div>
@@ -469,4 +495,3 @@
 </script>
 </body>
 </html>
-

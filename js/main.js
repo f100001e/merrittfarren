@@ -109,14 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
       var emailMatch = mailtoUrl.match(/^mailto:([^?]+)/);
       var emailOpened = false;
 
-      // Detect if email client opened (window loses focus)
       function onBlur() { emailOpened = true; }
       window.addEventListener('blur', onBlur);
 
-      // Try opening the mailto link
       window.location.href = mailtoUrl;
 
-      // Fallback: if no email client opened after a delay, copy the email address
       if (emailMatch) {
         var email = decodeURIComponent(emailMatch[1]);
         setTimeout(function() {
@@ -148,7 +145,22 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-});
+
+  // Expansion Function for issue cards
+  document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
+    var btn = card.querySelector('.issue-expand-btn');
+    var expanded = card.querySelector('.issue-expanded');
+    if (!btn || !expanded) return;
+
+    btn.addEventListener('click', function() {
+      var isOpen = card.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen);
+      expanded.setAttribute('aria-hidden', !isOpen);
+      btn.childNodes[0].textContent = isOpen ? 'Close ' : 'Read the full plan ';
+    });
+  });
+
+}); // end DOMContentLoaded
 
 // Cookie Consent Banner
 function handleCookieConsent(choice) {
@@ -194,3 +206,4 @@ function showMailtoToast(message) {
     if (document.cookie.indexOf('cookie_consent=accepted') !== -1) { loadAnalytics(); }
   }
 })();
+
