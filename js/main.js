@@ -144,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
       });
     });
-  }
 
   // Expansion Function for issue cards
   document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
