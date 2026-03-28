@@ -848,16 +848,38 @@
   transition: opacity 0.2s;
 }
 
+/* Fix for mobile - prevent oversized plus icon */
+.expand-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-weight: normal; /* Prevent bold making it larger */
+}
+
+/* Ensure the button text doesn't wrap on mobile */
+.issue-expand-btn span:not(.expand-icon) {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .expand-icon {
+    font-size: 1rem; /* Slightly smaller on mobile */
+  }
+  .issue-expand-btn {
+    font-size: 0.75rem;
+  }
+}
+
 .issue-expand-btn:hover { 
   opacity: 0.8; 
 }
 
-/* Simple plus/minus icon transition if you use a span for icons */
-.expand-icon { 
-  font-size: 1.1rem;
-  transition: transform 0.3s ease; 
-}
-
 .issue-card--expandable.is-open .expand-icon { 
   transform: rotate(45deg); 
+}
+
+/* Hide the vertical line of the plus sign when rotated */
+.issue-card--expandable.is-open .expand-icon .expand-icon-v {
+  display: none;
 }

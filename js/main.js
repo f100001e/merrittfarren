@@ -145,11 +145,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var btn = card.querySelector('.issue-expand-btn');
     var expanded = card.querySelector('.issue-expanded');
     if (!btn || !expanded) return;
-    btn.addEventListener('click', function() {
+    
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
       var isOpen = card.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', isOpen);
       expanded.setAttribute('aria-hidden', !isOpen);
-      btn.childNodes[0].textContent = isOpen ? 'Close ' : 'Read the full plan ';
+      
+      // Find the text node (first child is usually the text "Read the full plan")
+      var textNode = btn.childNodes[0];
+      if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+        textNode.textContent = isOpen ? 'Read Less' : 'Read the full plan';
+      }
     });
   });
 
