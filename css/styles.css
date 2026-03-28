@@ -840,6 +840,4 @@
   display: none;
 }
 
-.issue-card--expandable.is-open .issue-expanded {
-  display: block;
-}
+

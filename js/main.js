@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailField) { emailField.style.borderColor = '#C8202F'; emailField.focus(); }
         return;
       }
-
       submitNetlifyForm(emailListForm, emailListStatus, function() {
         setStatus(emailListStatus, 'Thanks for signing up! You are on the email list.', 'is-success');
         emailListForm.querySelectorAll('input, button').forEach(function(i) { i.disabled = true; });
@@ -54,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
       var msg = contactForm.querySelector('textarea');
       if (!email || !email.value.includes('@')) { email.style.borderColor = '#C8202F'; email.focus(); return; }
       if (!msg || !msg.value.trim()) { msg.style.borderColor = '#C8202F'; msg.focus(); return; }
-
       submitNetlifyForm(contactForm, contactStatus, function() {
         var cfBtn = document.getElementById('cfBtn');
         if (cfBtn) {
@@ -77,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
       var email = endorseForm.querySelector('input[type=email]');
       if (!name || !name.value.trim()) { name.style.borderColor = '#C8202F'; name.focus(); return; }
       if (!email || !email.value.includes('@')) { email.style.borderColor = '#C8202F'; email.focus(); return; }
-
       submitNetlifyForm(endorseForm, endorseStatus, function() {
         var endorseBtn = document.getElementById('endorseBtn');
         if (endorseBtn) {
@@ -101,19 +98,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Mailto link handler — ensures mailto buttons reliably open email client
+  // Mailto link handler
   document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       var mailtoUrl = this.getAttribute('href');
       var emailMatch = mailtoUrl.match(/^mailto:([^?]+)/);
       var emailOpened = false;
-
       function onBlur() { emailOpened = true; }
       window.addEventListener('blur', onBlur);
-
       window.location.href = mailtoUrl;
-
       if (emailMatch) {
         var email = decodeURIComponent(emailMatch[1]);
         setTimeout(function() {
@@ -144,13 +138,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
       });
     });
+  }
 
   // Expansion Function for issue cards
   document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
     var btn = card.querySelector('.issue-expand-btn');
     var expanded = card.querySelector('.issue-expanded');
     if (!btn || !expanded) return;
-
     btn.addEventListener('click', function() {
       var isOpen = card.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', isOpen);
@@ -170,8 +164,6 @@ function handleCookieConsent(choice) {
 }
 
 function loadAnalytics() {
-  // Google Analytics will only load after user accepts cookies
-  // Replace GA_MEASUREMENT_ID with your actual GA4 ID
   // var s = document.createElement('script');
   // s.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
   // s.async = true; document.head.appendChild(s);
