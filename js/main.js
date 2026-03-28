@@ -141,24 +141,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Expansion Function for issue cards
-  document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
-    var btn = card.querySelector('.issue-expand-btn');
-    var expanded = card.querySelector('.issue-expanded');
-    if (!btn || !expanded) return;
-    
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      var isOpen = card.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', isOpen);
-      expanded.setAttribute('aria-hidden', !isOpen);
-      
-      // Find the text node (first child is usually the text "Read the full plan")
-      var textNode = btn.childNodes[0];
-      if (textNode && textNode.nodeType === Node.TEXT_NODE) {
-        textNode.textContent = isOpen ? 'Read Less' : 'Read the full plan';
-      }
-    });
+// Expansion Function for issue cards
+document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
+  var btn = card.querySelector('.issue-expand-btn');
+  var expanded = card.querySelector('.issue-expanded');
+  if (!btn || !expanded) return;
+
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    var isOpen = card.classList.toggle('is-open');
+
+    btn.setAttribute('aria-expanded', String(isOpen));
+    expanded.setAttribute('aria-hidden', String(!isOpen));
   });
+});
 
 }); // end DOMContentLoaded
 

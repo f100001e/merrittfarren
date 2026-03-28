@@ -807,7 +807,7 @@
 
 /* State when the card is open */
 .issue-card--expandable.is-open .issue-expanded {
-  max-height: 2000px; /* High enough to fit all text */
+  max-height: 1200px; /* High enough to fit all text */
   opacity: 1;
   margin-top: 16px;
   /* Switch to a standard ease for the opening animation */
@@ -848,38 +848,29 @@
   transition: opacity 0.2s;
 }
 
-/* Fix for mobile - prevent oversized plus icon */
 .expand-icon {
-  font-size: 1.1rem;
-  line-height: 1;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  flex-shrink: 0;
   display: inline-block;
+  vertical-align: middle;
   transition: transform 0.3s ease;
-  font-weight: normal; /* Prevent bold making it larger */
-}
-
-/* Ensure the button text doesn't wrap on mobile */
-.issue-expand-btn span:not(.expand-icon) {
-  white-space: nowrap;
 }
 
 @media (max-width: 480px) {
   .expand-icon {
-    font-size: 1rem; /* Slightly smaller on mobile */
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
   }
+
   .issue-expand-btn {
     font-size: 0.75rem;
   }
 }
-
-.issue-expand-btn:hover { 
-  opacity: 0.8; 
-}
-
 .issue-card--expandable.is-open .expand-icon { 
   transform: rotate(45deg); 
 }
 
-/* Hide the vertical line of the plus sign when rotated */
-.issue-card--expandable.is-open .expand-icon .expand-icon-v {
-  display: none;
-}
+
