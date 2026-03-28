@@ -860,13 +860,22 @@
 
 @media (max-width: 480px) {
   .expand-icon {
-    width: 14px;
-    height: 14px;
-    min-width: 14px;
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
   }
 
   .issue-expand-btn {
     font-size: 0.75rem;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 960px) {
+  .expand-icon {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
   }
 }
 .issue-card--expandable.is-open .expand-icon { 

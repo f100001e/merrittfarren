@@ -141,22 +141,20 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Expansion Function for issue cards
-// Expansion Function for issue cards
-document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
-  var btn = card.querySelector('.issue-expand-btn');
-  var expanded = card.querySelector('.issue-expanded');
-  if (!btn || !expanded) return;
+  document.querySelectorAll('.issue-card--expandable').forEach(function(card) {
+    var btn = card.querySelector('.issue-expand-btn');
+    var expanded = card.querySelector('.issue-expanded');
+    if (!btn || !expanded) return;
 
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
 
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
+      var isOpen = card.classList.toggle('is-open');
 
-    var isOpen = card.classList.toggle('is-open');
-
-    btn.setAttribute('aria-expanded', String(isOpen));
-    expanded.setAttribute('aria-hidden', String(!isOpen));
+      btn.setAttribute('aria-expanded', String(isOpen));
+      expanded.setAttribute('aria-hidden', String(!isOpen));
+    });
   });
-});
 
 }); // end DOMContentLoaded
 
