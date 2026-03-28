@@ -836,8 +836,6 @@
   .expand-icon-v { transition: opacity 0.3s ease; }
   .issue-card--expandable.is-open .expand-icon { transform: rotate(45deg); }
 
-  .issue-expanded {
-  display: none;
 }
 
 
