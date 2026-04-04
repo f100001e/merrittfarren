@@ -803,13 +803,15 @@
     </div>
 
     <!-- COOKIE CONSENT BANNER -->
+    <!-- COOKIE CONSENT BANNER -->
     <div class="cookie-banner" id="cookieBanner">
         <p>
             We use cookies to analyze site traffic and improve your experience. 
             <a href="#" onclick="document.getElementById('privacyModal').classList.add('open');document.body.style.overflow='hidden';return false;">Privacy Policy</a>
         </p>
         <div class="cookie-actions">
-            <button onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookieAccepted','1');">Got it</button>
+            <button onclick="handleCookieConsent('accepted')">Accept</button>
+            <button onclick="handleCookieConsent('declined')">Decline</button>
         </div>
     </div>
 
