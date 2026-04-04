@@ -814,7 +814,8 @@
     </div>
 
     <script>
-    if (localStorage.getItem('cookieAccepted')) {
+    // Hide banner if user already accepted cookies
+    if (localStorage.getItem('cookieAccepted') === 'true') {
         document.getElementById('cookieBanner').style.display = 'none';
     }
     </script>

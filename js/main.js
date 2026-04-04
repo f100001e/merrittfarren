@@ -158,23 +158,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }); // end DOMContentLoaded
 
-// Cookie Consent Banner
-function handleCookieConsent(choice) {
-  var d = new Date(); d.setFullYear(d.getFullYear() + 1);
-  document.cookie = 'cookie_consent=' + choice + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
-  document.getElementById('cookieBanner').classList.add('hidden');
-  if (choice === 'accepted') { loadAnalytics(); }
-}
 
-function loadAnalytics() {
-  // var s = document.createElement('script');
-  // s.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-  // s.async = true; document.head.appendChild(s);
-  // s.onload = function() {
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag(){dataLayer.push(arguments);}
-  //   gtag('js', new Date()); gtag('config', 'GA_MEASUREMENT_ID');
-  // };
+
+// Cookie Consent Banner - works with GTM
+function handleCookieConsent(choice) {
+  localStorage.setItem('cookieAccepted', choice === 'accepted');
+  document.getElementById('cookieBanner').classList.add('hidden');
+  
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  if (choice === 'accepted') {
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+  } else {
+    gtag('consent', 'update', {'analytics_storage': 'denied'});
+  }
 }
 
 // Toast notification for mailto fallback
@@ -193,12 +191,7 @@ function showMailtoToast(message) {
   }, 3000);
 }
 
-(function() {
-  var banner = document.getElementById('cookieBanner');
-  if (banner && document.cookie.indexOf('cookie_consent=') !== -1) {
-    banner.classList.add('hidden');
-    if (document.cookie.indexOf('cookie_consent=accepted') !== -1) { loadAnalytics(); }
-  }
-})();
+// Analytics handled by Google Tag Manager
+// Cookie consent managed via GTM's consent mode
 
 
