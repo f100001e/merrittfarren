@@ -191,7 +191,39 @@ function showMailtoToast(message) {
   }, 3000);
 }
 
-// Analytics handled by Google Tag Manager
-// Cookie consent managed via GTM's consent mode
+// Video Carousel
+const track = document.getElementById('vcTrack');
+const slides = track ? track.querySelectorAll('.vc-slide') : [];
+let current = 0;
+const originals = Array.from(slides).map(s => s.innerHTML);
+
+function goTo(index) {
+  slides[current].innerHTML = originals[current];
+  current = (index + slides.length) % slides.length;
+  track.style.transform = `translateX(-${current * 100}%)`;
+}
+
+document.getElementById('vcPrev')?.addEventListener('click', () => goTo(current - 1));
+document.getElementById('vcNext')?.addEventListener('click', () => goTo(current + 1));
+
+
+track?.addEventListener('click', e => {
+  const btn = e.target.closest('.play-btn');
+  if (!btn) return;
+  const preview = btn.closest('.video-preview');
+  const id = preview.dataset.id;
+  const title = preview.dataset.title;
+  const slide = preview.closest('.vc-slide');
+
+  slide.innerHTML = `
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/${id}?autoplay=1&controls=1&playsinline=1"
+        title="${title}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>`;
+});
 
 
