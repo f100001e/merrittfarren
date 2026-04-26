@@ -197,6 +197,23 @@ const slides = track ? track.querySelectorAll('.vc-slide') : [];
 let current = 0;
 const originals = Array.from(slides).map(s => s.innerHTML);
 
+// Autoplay first slide muted
+const firstSlide = slides[0];
+if (firstSlide) {
+  const preview = firstSlide.querySelector('.video-preview');
+  const id = preview.dataset.id;
+  const title = preview.dataset.title;
+  firstSlide.innerHTML = `
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=1&playsinline=1"
+        title="${title}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>`;
+}
+
 function goTo(index) {
   slides[current].innerHTML = originals[current];
   current = (index + slides.length) % slides.length;
