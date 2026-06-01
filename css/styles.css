@@ -2057,3 +2057,14 @@ footer strong {
   text-align: center;
   gap: 12px;
 }
+
+@media (min-width: 768px) {
+  .endorsements-list {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .endorsement-item {
+    width: 200px;
+  }
+}
