@@ -2037,9 +2037,16 @@ footer strong {
   }
 }
 
-.endorsement-item img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
+.endorsements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.endorsement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
 }
