@@ -2068,3 +2068,52 @@ footer strong {
     width: 200px;
   }
 }
+
+/* MOVEMENT FORM */
+.movement-form-section {
+  background: #f5f7fa;
+  padding: 80px 24px;
+}
+
+.movement-form-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.movement-form-intro {
+  color: #444;
+  margin-bottom: 36px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.cf-hint {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #777;
+  margin-left: 6px;
+}
+
+.cf-checkgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cf-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.cf-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #1b2a4a;
+  cursor: pointer;
+  flex-shrink: 0;
+}
