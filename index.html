@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -84,7 +83,8 @@
       })(window, document, "script", "dataLayer", "GTM-PVNHFPWB");
     </script>
 
-<!-- End Google Tag Manager --></head>
+    <!-- End Google Tag Manager -->
+  </head>
   <body>
     <!-- NAV -->
     <nav>
@@ -239,7 +239,7 @@
       </div>
     </div>
 
-        <!-- HERO -->
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-fire-bg"></div>
       <div class="hero-bg-overlay"></div>
@@ -299,7 +299,7 @@
             aria-live="polite"
           ></p>
         </div>  Email section is commented out -->
-        <!--<div class="hero-action-col">
+      <!--<div class="hero-action-col">
           <h3>Donate</h3>
           <p>
             Your contribution fuels the fight for fair insurance in California.
@@ -312,6 +312,7 @@
             >Donate Now</a
           >
         </div>  Donate section is commented out -->
+      <div class="hero-actions">
         <div class="hero-action-col">
           <h3>See the Plan</h3>
           <p>
@@ -321,6 +322,7 @@
           <a href="#issues" class="action-btn action-btn-navy">View the Plan</a>
         </div>
       </div>
+
       <div class="scroll-indicator">
         <div class="scroll-chevron"></div>
       </div>
@@ -331,204 +333,213 @@
       <div class="letter-section-bg"></div>
       <div class="letter-section-overlay"></div>
       <div class="letter-section-inner">
-        <div class="letter-intro">
-          <div class="section-label letter-label">
-            MORE THAN 556,000 VOTES GAINED IN A THREE-MONTH CAMPAIGN BY AN UNFUNDED
-            UNKNOWN RUNNING AGAINST THE POLITICAL ESTABLISHMENT.
-          </div>
-
-          <h2 class="letter-h2">
-            THAT'S NOT AN END<br />
-            <span>IT'S A BEGINNING</span><br />
-            Read Merritt's Post Election Message to Voters.
-          </h2>
-          <p class="letter-intro-copy">
-            The message is now presented as a finished document with the Seal of
-            California in the header, instead of being squeezed into the page as
-            nested web copy.
-          </p>
-        </div>
-
         <figure class="letter-document">
-          <a href="images/documents/merritt-post-election-letter.pdf" aria-label="Open Merritt Farren's post election letter as a PDF">
-            <img
-              src="images/documents/merritt-post-election-letter.png"
-              alt="Post election letter from Merritt Farren with the Seal of California in the header"
-            />
-          </a>
+          <img
+            src="images/merritt_letter.png"
+            alt="Post election letter from Merritt Farren with the Seal of California in the header"
+          />
           <figcaption class="letter-actions">
-            <a href="images/documents/merritt-post-election-letter.pdf">Open PDF</a>
-            <a href="images/documents/merritt-post-election-letter.png" download>Download PNG</a>
+            <a href="images/merritt_letter.png" download>Download Letter</a>
           </figcaption>
         </figure>
       </div>
     </div>
 
     <!-- MOVEMENT FORM -->
-<section id="movement-form" class="movement-form-section">
-  <div class="movement-form-inner">
-    <div class="section-label">Join the Movement</div>
-    <h2>Tell Us Who You Are</h2>
-    <p class="movement-form-intro">
-      Please tell us who you are and give us your ideas for change here.
-      Your contact information will stay with us. We won't share or sell
-      it outside Merritt's campaign for change.
-    </p>
+    <section id="movement-form" class="movement-form-section">
+      <div class="movement-form-inner">
+        <div class="section-label">Join the Movement</div>
+        <h2>Tell Us Who You Are</h2>
+        <p class="movement-form-intro">
+          Please tell us who you are and give us your ideas for change here.
+          Your contact information will stay with us. We won't share or sell it
+          outside Merritt's campaign for change.
+        </p>
 
-    <form
-      action="/thanks"
-      id="movementForm"
-      method="POST"
-      name="movement"
-    >
-      <input type="hidden" name="form-name" value="movement" />
+        <form action="/thanks" id="movementForm" method="POST" name="movement">
+          <input type="hidden" name="form-name" value="movement" />
 
-      <!-- Name Row -->
-      <div class="cf-row">
-        <div class="cf-group">
-          <label for="mf-first">First Name</label>
-          <input
-            type="text"
-            id="mf-first"
-            name="first-name"
-            placeholder="First"
-            autocomplete="given-name"
-            required
-          />
-        </div>
-        <div class="cf-group">
-          <label for="mf-last">Last Name</label>
-          <input
-            type="text"
-            id="mf-last"
-            name="last-name"
-            placeholder="Last"
-            autocomplete="family-name"
-            required
-          />
-        </div>
-      </div>
-
-      <!-- Email + Zip Row -->
-      <div class="cf-row">
-        <div class="cf-group">
-          <label for="mf-email">Email</label>
-          <input
-            type="email"
-            id="mf-email"
-            name="email"
-            placeholder="your@email.com"
-            autocomplete="email"
-            required
-          />
-        </div>
-        <div class="cf-group">
-          <label for="mf-zip">Zip Code</label>
-          <input
-            type="text"
-            id="mf-zip"
-            name="zip"
-            placeholder="90210"
-            maxlength="10"
-            autocomplete="postal-code"
-          />
-        </div>
-      </div>
-
-      <!-- Biggest Concerns -->
-      <div class="cf-row">
-        <div class="cf-group cf-full">
-          <label>Your Biggest Concerns <span class="cf-hint">(check all that apply)</span></label>
-          <div class="cf-checkgroup">
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="affordability-generally" />
-              Affordability generally
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="employment" />
-              Employment opportunities and the quality of jobs available
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="insurance" />
-              Insurance affordability and availability
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="housing" />
-              Housing affordability and availability
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="crime" />
-              Crime
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="homelessness" />
-              Homelessness
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="concerns" value="other-concern" />
-              Other
-            </label>
+          <!-- Name Row -->
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="mf-first">First Name</label>
+              <input
+                type="text"
+                id="mf-first"
+                name="first-name"
+                placeholder="First"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+            <div class="cf-group">
+              <label for="mf-last">Last Name</label>
+              <input
+                type="text"
+                id="mf-last"
+                name="last-name"
+                placeholder="Last"
+                autocomplete="family-name"
+                required
+              />
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- How Did You Hear -->
-      <div class="cf-row">
-        <div class="cf-group cf-full">
-          <label>Where did you hear about Merritt and his campaign? <span class="cf-hint">(check all that apply)</span></label>
-          <div class="cf-checkgroup">
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="voter-guide-statement" />
-              Candidate statement in official state voter guide
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="video-ad" />
-              Video ad
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="online-social-ad" />
-              Other online / social media ad
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="voting-guide-mailer" />
-              Voting guide mailer
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="radio-ad" />
-              Radio ad
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="radio-podcast-interview" />
-              Radio or podcast interview
-            </label>
-            <label class="cf-check">
-              <input type="checkbox" name="heard-via" value="other-heard" />
-              Other
-            </label>
+          <!-- Email + Zip Row -->
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="mf-email">Email</label>
+              <input
+                type="email"
+                id="mf-email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="cf-group">
+              <label for="mf-zip">Zip Code</label>
+              <input
+                type="text"
+                id="mf-zip"
+                name="zip"
+                placeholder="90210"
+                maxlength="10"
+                autocomplete="postal-code"
+              />
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Ideas -->
-      <div class="cf-row">
-        <div class="cf-group cf-full">
-          <label for="mf-ideas">
-            Give us your ideas on how we turn Merritt's campaign into a
-            larger movement for a better California.
-          </label>
-          <textarea
-            id="mf-ideas"
-            name="ideas"
-            placeholder="Share your thoughts..."
-          ></textarea>
-        </div>
-      </div>
+          <!-- Biggest Concerns -->
+          <div class="cf-row">
+            <div class="cf-group cf-full">
+              <label
+                >Your Biggest Concerns
+                <span class="cf-hint">(check all that apply)</span></label
+              >
+              <div class="cf-checkgroup">
+                <label class="cf-check">
+                  <input
+                    type="checkbox"
+                    name="concerns"
+                    value="affordability-generally"
+                  />
+                  Affordability generally
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="concerns" value="employment" />
+                  Employment opportunities and the quality of jobs available
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="concerns" value="insurance" />
+                  Insurance affordability and availability
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="concerns" value="housing" />
+                  Housing affordability and availability
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="concerns" value="crime" />
+                  Crime
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="concerns" value="homelessness" />
+                  Homelessness
+                </label>
+                <label class="cf-check">
+                  <input
+                    type="checkbox"
+                    name="concerns"
+                    value="other-concern"
+                  />
+                  Other
+                </label>
+              </div>
+            </div>
+          </div>
 
-      <button class="cf-submit" type="submit">Submit</button>
-      <p class="form-status" id="movementFormStatus" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
+          <!-- How Did You Hear -->
+          <div class="cf-row">
+            <div class="cf-group cf-full">
+              <label
+                >Where did you hear about Merritt and his campaign?
+                <span class="cf-hint">(check all that apply)</span></label
+              >
+              <div class="cf-checkgroup">
+                <label class="cf-check">
+                  <input
+                    type="checkbox"
+                    name="heard-via"
+                    value="voter-guide-statement"
+                  />
+                  Candidate statement in official state voter guide
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="heard-via" value="video-ad" />
+                  Video ad
+                </label>
+                <label class="cf-check">
+                  <input
+                    type="checkbox"
+                    name="heard-via"
+                    value="online-social-ad"
+                  />
+                  Other online / social media ad
+                </label>
+                <label class="cf-check">
+                  <input
+                    type="checkbox"
+                    name="heard-via"
+                    value="voting-guide-mailer"
+                  />
+                  Voting guide mailer
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="heard-via" value="radio-ad" />
+                  Radio ad
+                </label>
+                <label class="cf-check">
+                  <input
+                    type="checkbox"
+                    name="heard-via"
+                    value="radio-podcast-interview"
+                  />
+                  Radio or podcast interview
+                </label>
+                <label class="cf-check">
+                  <input type="checkbox" name="heard-via" value="other-heard" />
+                  Other
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ideas -->
+          <div class="cf-row">
+            <div class="cf-group cf-full">
+              <label for="mf-ideas">
+                Give us your ideas on how we turn Merritt's campaign into a
+                larger movement for a better California.
+              </label>
+              <textarea
+                id="mf-ideas"
+                name="ideas"
+                placeholder="Share your thoughts..."
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="cf-submit" type="submit">Submit</button>
+          <p
+            class="form-status"
+            id="movementFormStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════
          NEW VIDEO SECTION — embedded after bio, before issues
@@ -1350,7 +1361,7 @@
         </div>
       </div>
     </section>
-  
+
     <!-- CONTACT
     <section id="contact">
       <div class="section-inner">
@@ -1850,18 +1861,29 @@
     </script>
     <script src="js/main.js"></script>
 
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVNHFPWB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><!-- Google tag (gtag.js) -->
- 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18094004926">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PVNHFPWB"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) --><!-- Google tag (gtag.js) -->
 
-  gtag('config', 'AW-18094004926');
-</script></body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18094004926"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-18094004926");
+    </script>
+  </body>
 </html>
