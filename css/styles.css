@@ -2150,56 +2150,81 @@ footer strong {
   }
 }
 
-/* LETTER SECTION - Fixed */
-.letter-section {
+/* LETTER / POST-ELECTION SECTION */
+.letter-section-fire {
   position: relative;
   overflow: hidden;
-  padding: 60px 20px;
-  background: var(--offwhite);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.letter-section-inner {
-  max-width: 560px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.letter-document {
-  margin: 0;
   padding: 0;
-  max-width: 100%;
+  min-height: 460px;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.letter-document img {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15);
+.letter-section-fire-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/pacific-palisades.png"); /* ← swap in */
+  background-size: cover;
+  background-position: center 40%;
 }
 
-/* Mobile adjustments */
-@media (max-width: 580px) {
-  .letter-section {
-    padding: 30px 12px;
-  }
+.letter-section-fire-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(27, 42, 74, 0.95) 40%,
+    rgba(27, 42, 74, 0.7) 70%,
+    rgba(27, 42, 74, 0.3) 100%
+  );
+}
 
-  .letter-section-inner {
-    max-width: 100%;
-  }
+.letter-section-fire-inner {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding: 80px 40px;
+  max-width: 620px;
+}
 
-  .letter-document img {
-    max-width: 100%;
-    border-radius: 2px;
+.letter-section-fire-inner .section-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.letter-section-fire-inner .section-label::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.letter-section-fire-inner h2 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.02;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.letter-section-fire-inner h2 span {
+  color: var(--red);
+}
+
+.letter-section-fire-inner p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 16px;
+}
+
+.letter-section-fire-inner p strong {
+  color: white;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .letter-section-fire-inner {
+    padding: 60px 24px;
   }
 }
 
